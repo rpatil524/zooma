@@ -7,7 +7,7 @@ ZOOMA is an application for discovering optimal ontology mappings, developed by 
 
 ## Deploying with Docker
 
-The preferred method of deployment for ZOOMA is using Docker.   If you would like to deploy **the entire OntoTools stack** (OLS, OxO, and ZOOMA), check out the [OntoTools Docker Config](https://github.com/EBISPOT/ontotools-docker-config) repository. If you would like to deploy **ZOOMA only**, read on.
+The preferred method of deployment for ZOOMA is using Docker.   If you would like to deploy **the entire OntoTools stack** (OLS, OxO, and ZOOMA), check out the [OntoTools Docker Config](https://github.com/EBISPOT/ontotools-docker-config) repository. If you would like to deploy **ZOOMA only**, read on
 
 First, create the necessary volumes:
 
