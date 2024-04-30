@@ -36,6 +36,8 @@
             <artifactId>spring-web</artifactId>
             <!--            <version>4.2.5.RELEASE</version>-->
             <version>${org.springframework.version}</version>
+            <scope>system</scope>
+            <systemPath>/opt/zooma_github/ols-client/lib/spring-web-4.1.2.RELEASE.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>

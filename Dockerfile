@@ -20,7 +20,7 @@ RUN mvn install:install-file -DcreateChecksum=true -Dpackaging=jar -Dfile=/opt/z
 #RUN mvn install:install-file -DcreateChecksum=true -Dpackaging=jar -Dfile=/opt/zooma_github/ols-client/lib/jackson-annotations-2.7.0.jar -DgroupId=com.fasterxml.jackson.core -DartifactId=jackson-annotations -Dversion=2.7.0
 RUN mvn install:install-file -DcreateChecksum=true -Dpackaging=jar -Dfile=/opt/zooma_github/ols-client/lib/jcl-over-slf4j-1.7.5.jar -DgroupId=org.slf4j -DartifactId=jcl-over-slf4j -Dversion=1.7.5
 RUN mvn install:install-file -DcreateChecksum=true -Dpackaging=jar -Dfile=/opt/zooma_github/ols-client/lib/slf4j-api-1.7.5.jar -DgroupId=org.slf4j -DartifactId=slf4j-api -Dversion=1.7.5
-RUN mvn install:install-file -DcreateChecksum=true -Dpackaging=jar -Dfile=/opt/zooma_github/ols-client/lib/spring-web-4.1.2.RELEASE.jar -DgroupId=org.springframework -DartifactId=spring-web -Dversion=4.1.2.RELEASE
+#RUN mvn install:install-file -DcreateChecksum=true -Dpackaging=jar -Dfile=/opt/zooma_github/ols-client/lib/spring-web-4.1.2.RELEASE.jar -DgroupId=org.springframework -DartifactId=spring-web -Dversion=4.1.2.RELEASE
 
 RUN cd /opt/zooma_github && mvn clean package
 RUN mkdir /opt/tmp && unzip /opt/zooma_github/zooma-builder-app/target/zooma-builder.zip -d /opt/tmp
