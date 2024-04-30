@@ -16,6 +16,11 @@ RUN mvn install:install-file -DcreateChecksum=true -Dpackaging=jar -Dfile=/opt/z
 RUN mvn install:install-file -DcreateChecksum=true -Dpackaging=jar -Dfile=/opt/zooma_github/zooma-lodestar/lib/lode-virtuoso-impl-1.3.jar -DgroupId=ebi-lode -DartifactId=lode-virtuoso-impl -Dversion=1.3
 RUN mvn install:install-file -DcreateChecksum=true -Dpackaging=jar -Dfile=/opt/zooma_github/zooma-ui/lib/jackson-mapper-asl-1.5.3.jar -DgroupId=org.codehaus.jackson -DartifactId=jackson-mapper-asl -Dversion=1.5.3
 RUN mvn install:install-file -DcreateChecksum=true -Dpackaging=jar -Dfile=/opt/zooma_github/zooma-ui/lib/jackson-core-asl-1.5.3.jar -DgroupId=org.codehaus.jackson -DartifactId=jackson-core-asl -Dversion=1.5.3
+RUN mvn install:install-file -DcreateChecksum=true -Dpackaging=jar -Dfile=/opt/zooma_github/ols-client/lib/jackson-databind-2.7.3.jar -DgroupId=com.fasterxml.jackson.core -DartifactId=jackson-databind -Dversion=2.7.3
+RUN mvn install:install-file -DcreateChecksum=true -Dpackaging=jar -Dfile=/opt/zooma_github/ols-client/lib/jcl-over-slf4j-1.7.5.jar -DgroupId=org.slf4j.jcl-over-slf4j -DartifactId=jcl-over-slf4j -Dversion=1.7.5
+RUN mvn install:install-file -DcreateChecksum=true -Dpackaging=jar -Dfile=/opt/zooma_github/ols-client/lib/slf4j-api-1.7.5.jar -DgroupId=org.slf4j.slf4j-api -DartifactId=slf4j-api -Dversion=1.7.5
+RUN mvn install:install-file -DcreateChecksum=true -Dpackaging=jar -Dfile=/opt/zooma_github/ols-client/lib/spring-web-4.1.2.RELEASE.jar -DgroupId=org.springframework.spring-web -DartifactId=spring-web -Dversion=4.1.2.RELEASE
+
 RUN cd /opt/zooma_github && mvn clean package
 RUN mkdir /opt/tmp && unzip /opt/zooma_github/zooma-builder-app/target/zooma-builder.zip -d /opt/tmp
 RUN cp /opt/zooma_github/zooma-ui/target/zooma.war /usr/local/tomcat/webapps/
