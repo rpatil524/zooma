@@ -3,6 +3,9 @@ name: Build & publish zooma images
 on:
   push:
     branches: [ "dev", "stable" ]
+  pull_request:
+      branches:
+        - dev
 
 env:
   REGISTRY: ghcr.io
