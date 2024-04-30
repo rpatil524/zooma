@@ -25,10 +25,10 @@ RUN mvn install:install-file -DcreateChecksum=true -Dpackaging=jar -Dfile=/opt/z
 RUN mvn install:install-file -DcreateChecksum=true -Dpackaging=jar -Dfile=/opt/zooma_github/ols-client/lib/spring-web-4.1.2.RELEASE.jar -DgroupId=org.springframework -DartifactId=spring-web -Dversion=4.1.2.RELEASE
 
 RUN rm -rf /root/.m2/repository/org/springframework/spring-web/4.1.2.RELEASE
-RUN tar -xvzf /opt/zooma_github/ols-client/spring-web-4.2.1.tar.gz -C /root/.m2/repository/org/springframework/spring-web/
+RUN tar -xvzf /opt/zooma_github/ols-client/lib/spring-web-4.2.1.tar.gz -C /root/.m2/repository/org/springframework/spring-web/
 
 RUN rm -rf /root/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.7.3
-RUN tar -xvzf /opt/zooma_github/ols-client/jackson-databind-2.7.3.tar.gz -C /root/.m2/repository/com/fasterxml/jackson/core/jackson-databind/
+RUN tar -xvzf /opt/zooma_github/ols-client/lib/jackson-databind-2.7.3.tar.gz -C /root/.m2/repository/com/fasterxml/jackson/core/jackson-databind/
 
 
 RUN cd /opt/zooma_github && mvn clean package
