@@ -8,7 +8,7 @@ RUN apt-get update && apt-get install -y nano maven
 COPY . /opt/zooma_github/
 
 RUN rm -rf /root/.m2/
-RUN tar -xvf /opt/zooma_github/ols-client/lib/m2directory.tar.gz -C /root/
+RUN tar -xvzf /opt/zooma_github/ols-client/lib/m2directory.tar.gz -C /root/
 
 ENV OJDBC6="https://www.oracle.com/webapps/redirect/signon?nexturl=https://download.oracle.com/otn/utilities_drivers/jdbc/11204/ojdbc6.jar"
 RUN wget $OJDBC6 -O /lib/ojdbc6.jar \
