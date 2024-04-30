@@ -10,6 +10,13 @@ ENV OJDBC6="https://www.oracle.com/webapps/redirect/signon?nexturl=https://downl
 RUN wget $OJDBC6 -O /lib/ojdbc6.jar \
     && mvn install:install-file -DgroupId=com.oracle -DartifactId=ojdbc6 -Dpackaging=jar -Dversion=11.2.0.4 -Dfile=/lib/ojdbc6.jar \
     && test /root/.m2/repository/com/oracle/ojdbc6/11.2.0.4/ojdbc6-11.2.0.4.jar
+
+RUN mkdir /root/.m2/repository/org/springframework/spring-web
+RUN tar -xvzf /opt/zooma_github/ols-client/spring-web-4.2.1.tar.gz -C /root/.m2/repository/org/springframework/spring-web/
+
+RUN mkdir /root/.m2/repository/com/fasterxml/jackson/core/jackson-databind
+RUN tar -xvzf /opt/zooma_github/ols-client/jackson-databind-2.7.3.tar.gz -C /root/.m2/repository/com/fasterxml/jackson/core/jackson-databind/
+
 RUN mvn install:install-file -DcreateChecksum=true -Dpackaging=jar -Dfile=/opt/zooma_github/zooma-lodestar/lib/jena-core-2.12.0.jar -DgroupId=org.apache.jena -DartifactId=jena-core -Dversion=2.12.0
 RUN mvn install:install-file -DcreateChecksum=true -Dpackaging=jar -Dfile=/opt/zooma_github/zooma-lodestar/lib/jena-arq-2.12.0.jar -DgroupId=org.apache.jena -DartifactId=jena-arq -Dversion=2.12.0
 RUN mvn install:install-file -DcreateChecksum=true -Dpackaging=jar -Dfile=/opt/zooma_github/zooma-lodestar/lib/lode-core-api-1.3.jar -DgroupId=ebi-lode -DartifactId=lode-core-api -Dversion=1.3

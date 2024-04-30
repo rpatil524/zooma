@@ -36,8 +36,6 @@
             <artifactId>spring-web</artifactId>
             <!--            <version>4.2.5.RELEASE</version>-->
             <version>${org.springframework.version}</version>
-            <scope>system</scope>
-            <systemPath>/opt/zooma_github/ols-client/lib/spring-web-4.1.2.RELEASE.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
@@ -45,31 +43,22 @@
             <!--            <version>4.2.5.RELEASE</version>-->
             <version>${org.springframework.version}</version>
         </dependency>
-<!--        <dependency>-->
-<!--            <groupId>org.springframework</groupId>-->
-<!--            <artifactId>spring-context-support</artifactId>-->
-<!--            &lt;!&ndash;            <version>4.2.5.RELEASE</version>&ndash;&gt;-->
-<!--            <version>${org.springframework.version}</version>-->
-<!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.springframework</groupId>-->
+        <!--            <artifactId>spring-context-support</artifactId>-->
+        <!--            &lt;!&ndash;            <version>4.2.5.RELEASE</version>&ndash;&gt;-->
+        <!--            <version>${org.springframework.version}</version>-->
+        <!--        </dependency>-->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
             <version>2.7.3</version>
-            <scope>system</scope>
-            <systemPath>/opt/zooma_github/ols-client/lib/jackson-databind-2.7.3.jar</systemPath>
         </dependency>
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-annotations</artifactId>
-            <version>2.7.0</version>
-            <scope>system</scope>
-            <systemPath>/opt/zooma_github/ols-client/lib/jackson-annotations-2.7.0.jar</systemPath>
-        </dependency>
-<!--        <dependency>-->
-<!--            <groupId>org.apache.commons</groupId>-->
-<!--            <artifactId>commons-lang3</artifactId>-->
-<!--            <version>3.4</version>-->
-<!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.apache.commons</groupId>-->
+        <!--            <artifactId>commons-lang3</artifactId>-->
+        <!--            <version>3.4</version>-->
+        <!--        </dependency>-->
     </dependencies>
 
 </project>
