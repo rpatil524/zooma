@@ -30,11 +30,11 @@ RUN tar -xvzf /opt/zooma_github/ols-client/lib/springframework.tar.gz -C /root/.
 RUN rm -rf /root/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.7.3
 RUN tar -xvzf /opt/zooma_github/ols-client/lib/jackson-databind-2.7.3.tar.gz -C /root/.m2/repository/com/fasterxml/jackson/core/jackson-databind/
 
-RUN rm -rf /root/.m2/repository/aopalliance/aopalliance/
-RUN tar -xvzf /opt/zooma_github/ols-client/lib/aopalliance.tar.gz -C /root/.m2/repository/aopalliance/
+RUN rm -rf /root/.m2/repository/aopalliance/
+RUN tar -xvzf /opt/zooma_github/ols-client/lib/aopalliance.tar.gz -C /root/.m2/repository/
 
-RUN rm -rf /root/.m2/repository/commons-logging/commons-logging/
-RUN tar -xvzf /opt/zooma_github/ols-client/lib/commons-logging.tar.gz -C /root/.m2/repository/commons-logging/
+RUN rm -rf /root/.m2/repository/commons-logging
+RUN tar -xvzf /opt/zooma_github/ols-client/lib/commons-logging.tar.gz -C /root/.m2/repository/
 
 
 RUN cd /opt/zooma_github && mvn clean package
