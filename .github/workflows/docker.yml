@@ -20,9 +20,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
-
-      - name: Setup Git LFS
-        uses: actions/setup-git-lfs@v1
+        with:
+          lfs: true
 
       - name: Pull Git LFS files
         run: git lfs pull
