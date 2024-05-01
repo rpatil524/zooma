@@ -36,5 +36,10 @@ jobs:
       - name: Build and push zooma Docker image
         run: |
           docker build -t ghcr.io/ebispot/zooma:${{ github.sha }} .
-          docker tag ghcr.io/ebispot/zooma:${{ github.sha }} ghcr.io/ebispot/zooma:${{ github.ref_name }}
+          if [[ "${{ github.event_name }}" == "pull_request" ]]; then
+            TAG="PR-${{ github.event.pull_request.number }}"
+          else
+            TAG="${{ github.ref_name }}"
+          fi
+          docker tag ghcr.io/ebispot/zooma:${{ github.sha }} ghcr.io/ebispot/zooma:${TAG}
           docker push --all-tags ghcr.io/ebispot/zooma
