@@ -73,41 +73,71 @@ export default class Home extends Component<Props, State> {
 
         return (
             <main>
-              <Row>
-                <h3>Query</h3>
-                <Column small={12} medium={12}>
-                        <p>Use the text box to find possible ontology mappings for free text terms in the ZOOMA repository of curated annotation knowledge. You can add one term (e.g. 'Homo sapiens') per line. If you also have a type for your term (e.g. 'organism'), put this after the term, separated by a tab.
-If you are new to ZOOMA, take a look at our getting started guide.</p>
-                </Column>
-                <Column small={12} medium={12}>
-                  <Row>
+                <Row>
+                    <div className="mt-4">
+                        <div style={{
+                            backgroundColor: '#b2dce8',
+                            padding: '12px 24px',
+                            borderRadius: '8px',
+                            marginBottom: '16px',
+                            textAlign: 'justify',
+                            overflowX: 'auto'
+                        }}>
+                            <p>
+                                Do data resources managed by EMBL-EBI and our collaborators make a difference to your
+                                work? <br/><br/>
+                                Please take 10 minutes to fill in our annual user survey, and help us make the case for
+                                why sustaining open data resources is critical for life sciences research.<br/><br/>
+                                Survey link: <a href="https://www.surveymonkey.com/r/HJKYKTT?channel=[webpage]"
+                                                target="_blank">https://www.surveymonkey.com/r/HJKYKTT?channel=[webpage]</a>
+                            </p>
+                        </div>
+                    </div>
+                </Row>
+                <Row>
+                    <h3>Query</h3>
                     <Column small={12} medium={12}>
-                        <Row className="align-right">
-                            <a onClick={this.onClickShowExamples}>
-                                Show me some examples...
-                            </a>
+                        <p>Use the text box to find possible ontology mappings for free text terms in the ZOOMA
+                            repository of curated annotation knowledge. You can add one term (e.g. 'Homo sapiens') per
+                            line. If you also have a type for your term (e.g. 'organism'), put this after the term,
+                            separated by a tab.
+                            If you are new to ZOOMA, take a look at our getting started guide.</p>
+                    </Column>
+                    <Column small={12} medium={12}>
+                        <Row>
+                            <Column small={12} medium={12}>
+                                <Row className="align-right">
+                                    <a onClick={this.onClickShowExamples}>
+                                        Show me some examples...
+                                    </a>
+                                </Row>
+                            </Column>
+                        </Row>
+                        <Row>
+                            <textarea style={{minHeight: '300px'}} value={this.state.query}
+                                      onChange={this.onEditQuery}></textarea>
                         </Row>
                     </Column>
-                  </Row>
-                  <Row>
-                          <textarea style={{minHeight: '300px'}} value={this.state.query} onChange={this.onEditQuery}></textarea>
-                  </Row>
-                </Column>
-              </Row>
-              <Row>
-                <h3>Datasources</h3>
-                <Column small={12} medium={12}>
-                        <p>ZOOMA maps text to ontology terms based on curated mappings from selected datasources (more preferred), and by searching ontologies directly (less preferred). Here, you can select which curated datasources to use, optionally ranked in order of preference. You can also select which ontologies to search directly.</p>
-                </Column>
-                <Column small={12} medium={12}>
-                    {
-                        this.state.datasources &&
-                        this.state.datasourceConfig &&
-                        <Datasources datasources={this.state.datasources} datasourceConfig={this.state.datasourceConfig} onConfigChanged={this.onDatasourceConfigChanged} />
-                    }
-                </Column>
-              </Row>
-                    <br/>
+                </Row>
+                <Row>
+                    <h3>Datasources</h3>
+                    <Column small={12} medium={12}>
+                        <p>ZOOMA maps text to ontology terms based on curated mappings from selected datasources (more
+                            preferred), and by searching ontologies directly (less preferred). Here, you can select
+                            which curated datasources to use, optionally ranked in order of preference. You can also
+                            select which ontologies to search directly.</p>
+                    </Column>
+                    <Column small={12} medium={12}>
+                        {
+                            this.state.datasources &&
+                            this.state.datasourceConfig &&
+                            <Datasources datasources={this.state.datasources}
+                                         datasourceConfig={this.state.datasourceConfig}
+                                         onConfigChanged={this.onDatasourceConfigChanged}/>
+                        }
+                    </Column>
+                </Row>
+                <br/>
                 <Row className="align-center">
                     <button className="button large"
                      disabled={this.state.searching}
