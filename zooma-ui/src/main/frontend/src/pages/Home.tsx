@@ -74,27 +74,6 @@ export default class Home extends Component<Props, State> {
         return (
             <main>
                 <Row>
-                    <div className="mt-4">
-                        <div style={{
-                            backgroundColor: '#b2dce8',
-                            padding: '12px 24px',
-                            borderRadius: '8px',
-                            marginBottom: '16px',
-                            textAlign: 'justify',
-                            overflowX: 'auto'
-                        }}>
-                            <p>
-                                Do data resources managed by EMBL-EBI and our collaborators make a difference to your
-                                work? <br/><br/>
-                                Please take 10 minutes to fill in our annual user survey, and help us make the case for
-                                why sustaining open data resources is critical for life sciences research.<br/><br/>
-                                Survey link: <a href="https://www.surveymonkey.com/r/HJKYKTT?channel=[webpage]"
-                                                target="_blank">https://www.surveymonkey.com/r/HJKYKTT?channel=[webpage]</a>
-                            </p>
-                        </div>
-                    </div>
-                </Row>
-                <Row>
                     <h3>Query</h3>
                     <Column small={12} medium={12}>
                         <p>Use the text box to find possible ontology mappings for free text terms in the ZOOMA
