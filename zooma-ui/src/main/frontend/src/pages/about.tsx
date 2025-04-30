@@ -135,15 +135,15 @@ export default function About() {
             <p>The General Data Protection Regulation (GDPR) will apply in the UK from 25 May 2018. It will replace the 1998 Data Protection Act and introduce new rules on privacy notices, as well as processing and safeguarding personal data.</p>
 
             <p>
-              This website requires cookies, and the limited processing of your personal data in order to function. By using the site you are agreeing to this as outlined in our <a href="//www.ebi.ac.uk/data-protection/privacy-notice/embl-ebi-public-website">Privacy Notice</a> and <a href="//www.ebi.ac.uk/about/terms-of-use">Terms of Use</a>.
+              This website requires cookies, and the limited processing of your personal data in order to function. By using the site you are agreeing to this as outlined in our <a href={process.env.PUBLIC_URL + "/Privacy_notice_for_EMBL-EBI_Public_Website.pdf"}>Privacy Notice</a> and <a href="//www.ebi.ac.uk/about/terms-of-use">Terms of Use</a>.
             </p>
 
             <p>
-              <a href="//www.ebi.ac.uk/data-protection/privacy-notice/zooma">Zooma Submission Service</a> applies to the data submitted to Zooma (eg. data to ontology annotations) via the zooma-submission@ebi.ac.uk e-mail address.
+              <a href={process.env.PUBLIC_URL + "/Privacy_notice_for_Zooma_submission_service_email_based.pdf"}>Zooma Submission Service</a> applies to the data submitted to Zooma (eg. data to ontology annotations) via the zooma-submission@ebi.ac.uk e-mail address.
             </p>
 
             <p>
-              <a href="//www.ebi.ac.uk/data-protection/privacy-notice/zooma-mailing-list">Zooma Mail Service</a> applies to our public e-mail list ontology-tools-support [at] ebi.ac.uk.
+              <a href={process.env.PUBLIC_URL + "/Privacy_notice_for_Zooma_mailing_list.pdf"}>Zooma Mail Service</a> applies to our public e-mail list ontology-tools-support [at] ebi.ac.uk.
             </p>
           </div>
         </div>
