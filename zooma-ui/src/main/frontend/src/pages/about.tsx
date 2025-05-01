@@ -1,5 +1,3 @@
-import { EBIMasthead } from "../components/EBI";
-import ZoomaNav from "../Navbar";
 import React, { Fragment } from "react";
 import { Row, Column } from 'react-foundation'
 import { Link } from 'react-router-dom'

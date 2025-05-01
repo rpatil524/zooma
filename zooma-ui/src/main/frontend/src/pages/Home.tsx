@@ -1,5 +1,3 @@
-import { EBIMasthead, EBIFooter } from "../components/EBI";
-import ZoomaNav from "../Navbar";
 import { Fragment, Component, ChangeEvent } from "react";
 import { Row, Column, Callout } from 'react-foundation'
 import ResultsTable from "../components/ResultsTable";

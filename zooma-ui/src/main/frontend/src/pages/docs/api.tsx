@@ -1,8 +1,6 @@
 import { Link } from 'react-router-dom'
 import React, { Fragment } from "react";
 import { Row, Column } from "react-foundation";
-import { EBIMasthead, EBIFooter } from "../../components/EBI";
-import ZoomaNav from "../../Navbar";
 import examples from '../../data/api-response-examples.json'
 
 export default function docs() {
