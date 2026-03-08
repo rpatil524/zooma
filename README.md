@@ -1,3 +1,6 @@
+# We are developing a new version of ZOOMA. Please see https://github.com/EBISPOT/zooma2 for updates.
+---
+
 # ZOOMA
 
 ZOOMA is an application for discovering optimal ontology mappings, developed by the Samples, Phenotypes and Ontologies Team at [EMBL-EBI](http://www.ebi.ac.uk). It can be used to automatically annotate "properties" (plain text, descriptive values about biological entities) with "semantic tags" (ontology classes).
